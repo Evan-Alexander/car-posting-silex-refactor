@@ -51,5 +51,12 @@
         {
             return $this->image;
         }
+        function worthBuying($max_price, $max_miles)
+        {
+            if($max_price >= $this->price && $max_miles >= $this->miles)
+            {
+            return $this->price && $this->miles;
+            }
+        }
     }
 ?>

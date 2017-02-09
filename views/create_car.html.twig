@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Car Dealership's Homepage</title>
+    <link rel='stylesheet' href='css/styles.css' type='text/css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+</head>
+<body>
+    <h1>Your Car Dealership</h1>
+    {% if cars is not empty %}
+        <ul>
+            {% for car in cars %}
+                <li>{{ car.getName }}</li>
+                <li>{{ car.getPrice }}</li>
+                <li>{{ car.getMiles }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+
+    <form action="/delete_cars" method="post">
+
+        <button type="submit" class="btn-success">clear list</button>
+    </form>
+</body>
+</html>

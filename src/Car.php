@@ -47,6 +47,21 @@
         {
             return $this->miles;
         }
+
+        function save()
+        {
+            array_push($_SESSION['car_results'], $this);
+        }
+
+        static function getAll()
+        {
+            return $_SESSION['car_results'];
+        }
+
+        static function deleteAll()
+        {
+            $_SESSION['car_results'] =array();
+        }
         // function getImage()
         // {
         //     return $this->image;

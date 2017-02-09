@@ -4,14 +4,14 @@
         private $make_model;
         private $price;
         private $miles;
-        // private $image;
+        private $image;
 
-        function __construct($car_name, $car_price, $car_miles)
+        function __construct($car_name, $car_price, $car_miles, $car_image)
         {
             $this->make_model = $car_name;
             $this->price = $car_price;
             $this->miles = $car_miles;
-            // $this->image = $car_image;
+            $this->image = $car_image;
         }
 
         function setName($new_name)
@@ -29,10 +29,10 @@
             $this->miles = $new_miles;
         }
 
-        // function setImage($new_image)
-        // {
-        //     $this->image = $new_image;
-        // }
+        function setImage($new_image)
+        {
+            $this->image = $new_image;
+        }
 
         function getName()
         {
@@ -43,6 +43,7 @@
         {
             return $this->price;
         }
+
         function getMiles()
         {
             return $this->miles;
@@ -62,10 +63,12 @@
         {
             $_SESSION['car_results'] =array();
         }
-        // function getImage()
-        // {
-        //     return $this->image;
-        // }
+
+        function getImage()
+        {
+            return $this->image;
+        }
+
         function worthBuying($max_price, $max_miles)
         {
             if($max_price >= $this->price && $max_miles >= $this->miles)

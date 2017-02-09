@@ -13,6 +13,8 @@
                 <li>{{ car.getName }}</li>
                 <li>{{ car.getPrice }}</li>
                 <li>{{ car.getMiles }}</li>
+                <li><img src="{{ car.getImage }}"></li>
+
             {% endfor %}
         </ul>
     {% endif %}

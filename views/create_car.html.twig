@@ -4,9 +4,10 @@
     <title>Your Car Dealership's Homepage</title>
     <link rel='stylesheet' href='css/styles.css' type='text/css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link href="{{ app.request.getbaseurl }}/assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>Your Car Dealership</h1>
+    <h1>Your car is listed!</h1>
     {% if cars is not empty %}
         <ul>
             {% for car in cars %}
